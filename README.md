@@ -1,128 +1,68 @@
-# 🎬 Netflix Movies & TV Shows Data Analysis
+# Netflix Movies & TV Shows Data Analysis
 
-An Exploratory Data Analysis (EDA) project that analyzes Netflix's catalog using Python, Pandas, NumPy, and Matplotlib to uncover trends in content type, countries, genres, ratings, release years, and movie durations.
-
----
-
-## 📌 Project Overview
-
-This project explores the Netflix Movies & TV Shows dataset through data cleaning, visualization, and exploratory analysis. The goal is to understand how Netflix's content library has evolved over time and identify key patterns in its catalog.
+An Exploratory Data Analysis (EDA) project that analyzes the Netflix Movies & TV Shows dataset using Python, Pandas, NumPy, and Matplotlib to uncover trends in content distribution, genres, ratings, release years, countries, and movie durations.
 
 ---
 
-## 📂 Dataset
+## Project Overview
 
-- **Source:** Kaggle - Netflix Movies and TV Shows Dataset
-- **Records:** 8,807
-- **Features:** 12
+The objective of this project is to explore Netflix's content catalog through data cleaning, preprocessing, visualization, and exploratory analysis. The analysis focuses on identifying meaningful patterns in the dataset and presenting them through clear visualizations.
+
+The project demonstrates practical applications of:
+
+- Data cleaning
+- Exploratory Data Analysis (EDA)
+- Data visualization
+- Feature engineering
+- Working with real-world datasets using Python
 
 ---
 
-## 🛠️ Technologies Used
+## Dataset
+
+**Source:** Kaggle – Netflix Movies and TV Shows Dataset
+
+**Dataset Summary**
+
+- 8,807 titles
+- Movies and TV Shows
+- 12 original features
+- Missing values handled during preprocessing
+
+---
+
+## Technologies Used
 
 - Python
 - Pandas
 - NumPy
 - Matplotlib
 - Jupyter Notebook
+- Git
+- GitHub
 
 ---
 
-## 📊 Questions Answered
+## Project Structure
 
-- What is the distribution of Movies and TV Shows?
-- Which countries contribute the most content?
-- How has Netflix's library grown over time?
-- What are the most common content ratings?
-- What are the most popular genres?
-- Which directors have the highest number of titles?
-- What is the distribution of movie durations?
-- How has content production changed over the years?
-
----
-
-## 📈 Visualizations
-
-### 1. Movies vs TV Shows
-
-![Movies vs TV Shows](images/movies_vs_tvshows.png)
-
----
-
-### 2. Top Contributing Countries
-
-![Top Countries](images/top_countries.png)
-
----
-
-### 3. Netflix Growth Over Time
-
-![Growth](images/titles_added.png)
-
----
-
-### 4. Content Ratings
-
-![Ratings](images/ratings.png)
-
----
-
-### 5. Popular Genres
-
-![Genres](images/genres.png)
-
----
-
-### 6. Top Directors
-
-![Directors](images/directors.png)
-
----
-
-### 7. Movie Duration Distribution
-
-![Duration](images/duration.png)
-
----
-
-### 8. Release Year Distribution
-
-![Release Year](images/release_year.png)
-
----
-
-## 🔍 Key Findings
-
-- Movies make up a significantly larger portion of Netflix's catalog than TV Shows.
-- The United States and India contribute the highest number of titles.
-- Netflix expanded its catalog rapidly between 2016 and 2019.
-- TV-MA and TV-14 are the most common content ratings.
-- Drama and International genres dominate the platform.
-- Most Netflix movies have durations between 80 and 120 minutes.
-- The majority of titles available on Netflix were released during the last decade.
-
----
-
-## 📁 Project Structure
-
-```text
+```
 Netflix-Data-Analysis/
 │
 ├── data/
 │   └── netflix_titles.csv
 │
 ├── images/
+│   ├── movie_durations.png
 │   ├── movies_vs_tvshows.png
-│   ├── top_countries.png
+│   ├── rating_distribution.png
+│   ├── release_years.png
 │   ├── titles_added.png
-│   ├── ratings.png
-│   ├── genres.png
-│   ├── directors.png
-│   ├── duration.png
-│   └── release_year.png
+│   ├── top_countries.png
+│   ├── top_directors.png
+│   └── top_genres.png
 │
 ├── notebooks/
-│   └── Netflix_EDA.ipynb
+│   └── Netflix_Data_Analysis.ipynb
 │
 ├── README.md
 ├── requirements.txt
@@ -131,41 +71,148 @@ Netflix-Data-Analysis/
 
 ---
 
-## 🚀 How to Run
+## Analysis Performed
 
-1. Clone the repository
+### 1. Data Cleaning
+
+- Examined dataset structure
+- Checked data types
+- Identified missing values
+- Converted date columns to datetime format
+- Extracted the year from `date_added`
+- Processed movie duration values
+
+### 2. Content Distribution
+
+- Movies vs TV Shows
+
+### 3. Country Analysis
+
+- Split titles with multiple countries
+- Counted each country individually
+- Ranked countries by total number of titles
+
+### 4. Netflix Library Growth
+
+- Titles added each year
+- Distribution of release years
+
+### 5. Rating Analysis
+
+- Distribution of Netflix content ratings
+
+### 6. Genre Analysis
+
+- Extracted individual genres
+- Ranked the most common genres
+
+### 7. Director Analysis
+
+- Top directors by number of Netflix titles
+
+### 8. Movie Duration Analysis
+
+- Converted duration to numeric values
+- Analyzed runtime distribution
+
+---
+
+## Key Findings
+
+- Movies significantly outnumber TV Shows on Netflix.
+- The United States contributes the highest number of titles.
+- India is among the largest content-producing countries.
+- Netflix experienced rapid growth in content additions between 2016 and 2019.
+- Drama is the most common genre.
+- Rajiv Chilaka appears among the directors with the highest number of Netflix titles.
+- Most movies have durations between 80 and 120 minutes.
+
+---
+
+## Visualizations
+
+### Movies vs TV Shows
+
+![Movies vs TV Shows](images/movies_vs_tvshows.png)
+
+### Top Producing Countries
+
+![Top Countries](images/top_countries.png)
+
+### Distribution of Ratings
+
+![Ratings](images/rating_distribution.png)
+
+### Titles Added Per Year
+
+![Titles Added](images/titles_added.png)
+
+### Release Year Distribution
+
+![Release Years](images/release_years.png)
+
+### Top Genres
+
+![Top Genres](images/top_genres.png)
+
+### Top Directors
+
+![Top Directors](images/top_directors.png)
+
+### Movie Duration Distribution
+
+![Movie Duration](images/movie_durations.png)
+
+---
+
+## Installation
+
+Clone the repository:
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/Netflix-Data-Analysis.git
+git clone https://github.com/Gauransh47/Netflix-Data-Analysis.git
 ```
 
-2. Install the required packages
+Move into the project directory:
+
+```bash
+cd Netflix-Data-Analysis
+```
+
+Install the required packages:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-3. Open the notebook
+Launch Jupyter Notebook:
 
 ```bash
-jupyter notebook notebooks/Netflix_EDA.ipynb
+jupyter notebook
+```
+
+Open:
+
+```
+notebooks/Netflix_Data_Analysis.ipynb
 ```
 
 ---
 
-## 📌 Future Improvements
+## Future Improvements
 
-- Build an interactive dashboard using Streamlit or Plotly.
-- Perform sentiment analysis on title descriptions.
-- Develop a recommendation system based on genres and descriptions.
-- Explore actor collaboration networks.
-- Compare Netflix's catalog across different regions.
+- Build an interactive dashboard using Plotly or Streamlit
+- Perform sentiment analysis on title descriptions
+- Analyze actor collaboration networks
+- Develop a recommendation system
+- Deploy the project as a web application
 
 ---
 
-## 👨‍💻 Author
+## Author
 
 **Gauransh Pal**
 
-- GitHub: https://github.com/Gauransh47
-- LinkedIn: https://www.linkedin.com/in/gauransh-pal-11016b37a
+GitHub: https://github.com/Gauransh47
+
+LinkedIn: https://www.linkedin.com/in/gauransh-pal-11016b37a
